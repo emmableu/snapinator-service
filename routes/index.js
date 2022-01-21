@@ -41,7 +41,7 @@ router.post('/post-snap-xml/:projectName',
   const {projectName} = req.params;
   const {projectJson, type} = req.body;
   console.log("req.body");
-  console.log("projectJson: ", projectJson);
+  // console.log("projectJson: ", projectJson);
   console.log("type: ", type);
   const downloadXML = async (projectName, projectJson, type) => {
     try {
@@ -58,7 +58,6 @@ router.post('/post-snap-xml/:projectName',
 
       //any element in the document that contains `id' is defined in the code as a variable that indicates its element by default
       await page.waitForSelector('#projectJsonInput');
-      // console.log("projectJson: ", projectJson);
       await page.$eval("#projectJsonInput", (ele, j) =>
           ele.value = j, projectJson);
 
