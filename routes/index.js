@@ -37,6 +37,8 @@ let page;
   console.log("page launched")
 })();
 
+router.get('/test', async function (req, res){res.send("test success")});
+
 
 router.post('/post-snap-xml/:projectName',
     async function (req, res, next) {
