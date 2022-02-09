@@ -26,7 +26,8 @@ let page;
       '--disable-web-security',
       '--disable-features=IsolateOrigins',
       '--disable-site-isolation-trials'
-    ]
+    ],
+    executablePath: globalConfigIgnore.chromiumPath
   });
 // const browser = await puppeteer.launch();
   page = await browser.newPage();
