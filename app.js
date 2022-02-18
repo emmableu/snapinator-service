@@ -47,7 +47,7 @@ app.use(function(err, req, res, next) {
 
 
 var corsOptions = {
-  origin: globalConfigIgnore.snapReplayURL,
+  origin: [globalConfigIgnore.snapReplayURL, globalConfigIgnore.ideaBuilderURL],
   optionsSuccessStatus: 200 // some legacy browsers (IE11, various SmartTVs) choke on 204
 };
 
